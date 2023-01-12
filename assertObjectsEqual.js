@@ -1,19 +1,3 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected}`)
-  } else {
-    console.log(`Assertion Failed: ${actual} !== ${expected}`)
-  }
-
-};
-const eqArrays = (arr1, arr2) => {
-  if (arr1 = arr2) {
-    return true
-  } else {
-    return false
-  }
-}
-
 const eqObjects = (object1, object2) => {
   // Declare variable to store all keys of input objects
   let object1Keys = Object.keys(object1);
@@ -41,11 +25,20 @@ const eqObjects = (object1, object2) => {
   return true;
 };
 
+const assertObjectsEqual = function(actual, expected) {
+  const isEqual = eqObjects(actual, expected);
+  if (isEqual) {
+    console.log(`Assertion Passed: ${JSON.stringify(actual)} === ${JSON.stringify(expected)}`);
+  } else {
+    console.log(`Assertion Failed: ${JSON.stringify(actual)} !== ${JSON.stringify(expected)}`);
+  }
+};
 
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject); // => true
+const obj1 = {a: 1, b: 2, c: [1, 2, 3]};
+const obj2 = {c: [1, 2, 3], b: 2, a: 1};
+const obj3 = {a: 1, b: 2, c: [1, 2, 3], d: 4};
+const obj4 = {a: 1, b: 2, c: [1, 2, 4]};
 
-const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject); // => false
-
+assertObjectsEqual(obj1, obj2); // should log "Assertion Passed: { a: 1, b: 2, c: [ 1, 2, 3 ] } === { a: 1, b: 2, c: [ 1, 2, 3 ] }"
+assertObjectsEqual(obj1, obj3); // should log "Assertion Failed: { a: 1, b: 2, c: [ 1, 2, 3 ] } !== { a: 1, b: 2, c: [ 1, 2, 3 ], d: 4 }"
+assertObjectsEqual(obj1, obj4); // should log "Assertion Failed: { a: 1, b: 2, c: [ 1, 2, 3 ] } !== { a: 1, b: 2, c: [ 1, 2, 4 ] }"
