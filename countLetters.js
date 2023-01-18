@@ -31,3 +31,5 @@ const countLetters = (sentance) => {
 
 console.log(countLetters(sentence)
 )
+
+module.exports = countLetters

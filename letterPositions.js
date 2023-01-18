@@ -29,3 +29,5 @@ const letterPoisition = (sentance) => {
   }
   return results;
 }
+
+module.exports = letterPositions

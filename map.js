@@ -41,6 +41,8 @@ const eqArrays = (arr1, arr2) => {
   }
 }
 
+module.exports = map
+
 // assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
 // console.log("Expected output : 'g','c','t','m','t' ");
 
