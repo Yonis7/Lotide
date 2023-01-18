@@ -1,11 +1,10 @@
-
-
-const eqArrays = function(array1, array2) {
+const eqArrays = function(arr1, arr2) {
   // Make sure the arrays have the same length
-  if (array1.length !== array2.length) return false;
+  if (arr1.length !== arr2.length) return false;
   // Iterate over each element of both arrays and compare them
-  for (i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) return false;
+  for (i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) 
+    return false;
   }
   return true;
 }
