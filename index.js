@@ -9,6 +9,7 @@ const eqObjects = require('./eqObjects');
 const map = require('./map');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
+const findKey = require('./findKey');
 
 console.logmodule.exports = {
   head,
@@ -20,5 +21,6 @@ console.logmodule.exports = {
   eqObjects,
   map,
   takeUntil,
-  without
+  without,
+  findKey
 };

@@ -3,14 +3,14 @@ const tail = require('../tail');
 
 // test cases
 
-describe("#tail", () => {
-
-  it("result = ['lighthouse', 'labs']", () => {
+describe ('Test if tail function works', () => {
+  
+  it(`["Hello", "Lighthouse", "Labs"] should = ['lighthouse', 'labs']`, () => {
     const result = tail(["Hello", "Lighthouse", "Labs"]);
     assert.deepEqual(result, ["Lighthouse", "Labs"]);
   });
 
-  it("result = [1, 2, 3]", () => {
+  it(`[0, 1, 2, 3] result should = [1, 2, 3]`, () => {
     const result1 = tail([0, 1, 2, 3]);
     assert.deepEqual(result1, [1, 2, 3]);
   });

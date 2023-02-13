@@ -1,7 +1,7 @@
 {
   "name": "lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Lotide Library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Yonis7/Lotide.git"
   },
-  "author": "",
+  "author": "Yonis7",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Yonis7/Lotide/issues"
