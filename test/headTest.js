@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 const head  = require('../head');
 
-describe("#head", () => {
+describe(`Test if head function works`, () => {
 
   it("returns 1 for [1, 2, 3]", () => {
     
