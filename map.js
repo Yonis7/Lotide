@@ -1,5 +1,3 @@
-const words = ["ground", "control", "to", "major", "tom"];
-
 const map = function(array, callback) {
   
   const results = [];
@@ -18,28 +16,6 @@ const map = function(array, callback) {
 
 }
 
-
-
-
-const results1 = map(words, word => word[0]);
-console.log(results1);
-
-const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual, expected)) {
-    console.log(`Assertion Passed: ${actual} === ${expected}`)
-
-  } else {
-    console.log(`Assertion Failed: ${actual} !== ${expected}`)
-  }
-}
-
-const eqArrays = (arr1, arr2) => {
-  if (arr1 === arr2) {
-    return true
-  } else {
-    return false
-  }
-}
 
 module.exports = map
 
